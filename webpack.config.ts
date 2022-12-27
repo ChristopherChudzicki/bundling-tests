@@ -7,8 +7,12 @@ const config: Configuration = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'webpack_output'),
   },
-  mode: "development",
-  devtool: false
+  mode: "production",
+  devtool: false,
+  optimization: {
+      minimize: false,
+      usedExports: true,
+  }
 };
 
 export default config
