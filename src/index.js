@@ -1,4 +1,3 @@
-import { Color } from "three"
+import * as Threestrap from "threestrap"
 
-const color = new Color(0xff0000)
-console.log(color)
+window.Threestrap = Threestrap
