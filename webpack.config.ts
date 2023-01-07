@@ -1,5 +1,6 @@
 import * as path from "node:path"
 import type { Configuration } from "webpack"
+import TerserPlugin from "terser-webpack-plugin"
 
 const config: Configuration = {
   entry: './src/index.js',
@@ -10,8 +11,9 @@ const config: Configuration = {
   mode: "production",
   devtool: false,
   optimization: {
-      minimize: false,
+      minimize: true,
       usedExports: true,
+      sideEffects: false,
   }
 };
 
